@@ -1,0 +1,44 @@
+Tabel mahasiswa
+{
+  "_id": ObjectId("5f28c87472870f0001000001"),
+  "nim": "123456789",
+  "nama": "John Doe",
+  "angkatan": 2022,
+  "prodi": "Teknik Informatika",
+  "dosbing": "Dr. Budiman",
+  "hobi": ["Membaca", "Olahraga", "Bermain Gitar"]
+}
+
+Tabel hobi
+{
+  "_id": ObjectId("5f28c87472870f0001000002"),
+  "nama": "Membaca"
+}
+
+{
+  "_id": ObjectId("5f28c87472870f0001000003"),
+  "nama": "Olahraga"
+}
+
+{
+  "_id": ObjectId("5f28c87472870f0001000004"),
+  "nama": "Bermain Gitar"
+}
+
+Tabel DosBing
+{
+  "_id": ObjectId("5f28c87472870f0001000005"),
+  "nidn": "1234567890",
+  "nama": "Dr. Budiman",
+  "prodi": "Teknik Informatika"
+}
+
+Tabel dosen
+{
+  "_id": ObjectId("5f28c87472870f0001000006"),
+  "nidn": "1234567890",
+  "nama": "Dr. Budiman",
+  "prodi": "Teknik Informatika",
+  "pangkat": "Lektor Kepala",
+  "jabatan": "Ketua Jurusan"
+}
