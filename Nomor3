@@ -1,0 +1,45 @@
+MySQL
+JSON 1
+CREATE TABLE my_table (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255),
+    age INT,
+    cars JSON
+);
+
+INSERT INTO my_table (name, age, cars)
+VALUES ('John', 30, '{"name":"Ford", "models":["Fiesta", "Focus", "Mustang"]}');
+
+JSON 2
+CREATE TABLE countries (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  description VARCHAR(255),
+  region VARCHAR(255),
+  countries JSON
+);
+
+INSERT INTO countries (description, region, countries)
+VALUES ('Map containing Country, Capital, Currency, and some States of that Country', 'Asia', '{"Country": "India", "Data": {"Capital": "New Delhi", "minimum temp (Degree Celsius)": 6, "maximum temp (Degree Celsius)": 45, "Currency": "Rupee"}}');
+
+
+MongoDB
+JSON 1
+db.myCollection.insertOne({
+    name: "John",
+    age: 30,
+    cars: [
+        { name: "Ford", models: ["Fiesta", "Focus", "Mustang"] },
+        { name: "BMW", models: ["320", "X3", "X5"] },
+        { name: "Fiat", models: ["500", "Panda"] }
+    ]
+});
+
+JSON 2
+db.countries.insertOne({
+    Description: "Map containing Country, Capital, Currency, and some States of that Country",
+    Region: "Asia",
+    Countries: [
+        { Country: "India", Data: { Capital: "New Delhi", "minimum temp (Degree Celsius)": 6, "maximum temp (Degree Celsius)": 45, Currency: "Rupee" } },
+        { Country: "Nepal", Data: { Capital: "Katmandu", "minimum temp (Degree Celsius)": 9, "maximum temp (Degree Celsius)": 23, Currency: "Nepalese rupee" } }
+    ]
+});
