@@ -1,0 +1,47 @@
+Insert One
+db.mahasiswa.insertOne({
+  nim: "123456789",
+  nama: "John Doe",
+  angkatan: 2022,
+  prodi: "Teknik Informatika",
+  dosbing: "Dr. Budiman",
+  hobi: ["Membaca", "Olahraga", "Bermain Gitar"]
+});
+
+Insert Many
+db.mahasiswa.insertMany([
+  {
+    nim: "123456790",
+    nama: "Jane Doe",
+    angkatan: 2022,
+    prodi: "Teknik Elektro",
+    dosbing: "Dr. Siska",
+    hobi: ["Menari", "Melukis", "Menulis"]
+  },
+  {
+    nim: "123456791",
+    nama: "Peter Smith",
+    angkatan: 2022,
+    prodi: "Teknik Mesin",
+    dosbing: "Dr. Adi",
+    hobi: ["Bermain Game", "Menonton Film", "Mendengarkan Musik"]
+  }
+]);
+
+Update One
+db.mahasiswa.updateOne({
+  nim: "123456789"
+}, {
+  $set: {
+    hobi: ["Membaca", "Olahraga", "Bermain Gitar", "Coding"]
+  }
+});
+
+Update Many
+db.mahasiswa.updateMany({
+  angkatan: 2022
+}, {
+  $set: {
+    prodi: "Teknik Komputer"
+  }
+});
